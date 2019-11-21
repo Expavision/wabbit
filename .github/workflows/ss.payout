@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+public class Socialsecuritypayout {
+	 public static void main(String[] args) {
+		 Scanner in=new Scanner(System.in);
+	       System.out.print("Enter hourly wage: ");
+	       int hourlywage=in.nextInt();
+	       System.out.print("Enter your hours per week: ");
+	       int hoursperweek=in.nextInt();
+	       double income=income_calc(hourlywage,hoursperweek);
+	       System.out.println("You will earn "+income+" per year");
+	      
+	       double tax=tax_calc(income);
+	       System.out.println("You will pay "+ " " + "$"+tax+" in Social Security tax");
+	      
+
+	   }
+	   public static double tax_calc(double income)
+	   {
+	       
+	       return income*6.2/100;
+	   }
+	  
+	   public static double income_calc(double hourlywage,double hoursperweek)
+	   {
+	      
+	       return hoursperweek*hourlywage*52;
+	   }
+
+	}
+	  
