@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.Random;
+public class insults {
+	   public static void main(String[] args) {
+	       Scanner sc = new Scanner(System.in);
+	       String name;
+	       System.out.print("Enter your name: ");
+	       name = sc.nextLine();
+	       String insults[] = {
+	               "your mother was a hamster",
+	               "you English pig dog!",
+	               "you are foolish!",
+	               "You are such a silly person",
+	               "you are so dumb",
+	       "you silly English Knnnnniggets"};
+	       Random rand = new Random();
+	       int index;
+	       String choice;
+	       while(true){
+	           index = rand.nextInt(insults.length);
+	           System.out.println(name+", "+insults[index]);
+	           System.out.print("Shall I taunt you a second time [yes/no]? ");
+	           choice = sc.nextLine();
+	           if(!choice.equalsIgnoreCase("yes")){
+	               break;
+	           }
+	       }
+	       index = rand.nextInt(insults.length);
+	       System.out.println("Now go away, "+insults[index]);
+	   }
+	}
+
